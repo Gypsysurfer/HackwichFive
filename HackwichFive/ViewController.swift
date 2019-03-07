@@ -30,7 +30,8 @@ class ViewController: UIViewController {
     
     @IBAction func myGuessButtonPressed(_ sender: Any) {
         //1. create alert view
-        let alert = UIAlertController(title:"Hello World!", message: "This is my first alert view", preferredStyle: .alert)
+        let message = "The value is : \(currentValue)"
+        let alert = UIAlertController(title:"Hello World!", message: message, preferredStyle: .alert)
         
         //2. button that user taps to dismiss view controller
         let action = UIAlertAction(title: "Awesome", style: .default, handler: nil)
@@ -42,7 +43,7 @@ class ViewController: UIViewController {
         present(alert, animated: true, completion: nil)
         
         //5. New variable message that displays a message that includes currentValue
-        let message = "The value is : \(currentValue)"
+       
     }
 }
 
