@@ -23,9 +23,16 @@ class ViewController: UIViewController {
         currentValue = lroundf(slider.value)
         
         startNewRound()
+        
+        let thumbImageNormal = UIImage(named: "SliderThumb-Normal")
+        
+        slider.setThumbImage(thumbImageNormal, for: .normal)
+        
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
+        
+        
     }
 
     func startNewRound() {
@@ -37,7 +44,9 @@ class ViewController: UIViewController {
     @IBAction func sliderHasMoved(_ sender: Any) {
         
     print("The value of the slider is:\(slider.value)")
+        
     currentValue = lroundf(slider.value)
+        
         
     }
     
