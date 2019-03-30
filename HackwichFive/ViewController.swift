@@ -24,6 +24,7 @@ class ViewController: UIViewController {
         
         startNewRound()
         
+        
         let thumbImageNormal = UIImage(named: "SliderThumb-Normal")
         
         slider.setThumbImage(thumbImageNormal, for: .normal)
@@ -72,6 +73,17 @@ class ViewController: UIViewController {
         startNewRound()
         //5. New variable message that displays a message that includes currentValue
         
+        updateTargetLabel()
+        
+        
     }
+    
+    @IBOutlet var targetLabel: UILabel!
+    
+    func updateTargetLabel () {
+        
+    targetLabel.text = String(targetValue)
+        
 }
-
+        
+}
